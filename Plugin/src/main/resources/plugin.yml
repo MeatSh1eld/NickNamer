@@ -1,6 +1,6 @@
 name: NickNamer
 main: org.inventivetalent.nicknamer.NickNamerPlugin
-author: inventivetalent
+author: [inventivetalent, MeatShield] 
 version: ${project.version}
 
 depend: [PacketListenerApi]
@@ -10,3 +10,41 @@ database: true
 commands:
   nicknamer:
     aliases: []
+    usage: /nicknamer
+    description: Base command
+  nick:
+    usage: /nick <Name> [Player]
+    permission: nick.command.name
+    description: Set your own, or another player's name
+  clearNick:
+    usage: /clearNick [Player]
+    permission: nick.command.name.clear
+    description: Reset your own, or another player's name
+  refreshNick:
+    usage: /refreshNick [Player]
+    permission: nick.command.refresh
+    description: Update name & skin to all players including yourself
+  listNames:
+    usage: /listNames
+    permission: nick.command.name.list
+    description: Get a list of used names
+  nickreload:
+    usage: /nickreload
+    permission: nicknamer.reload
+    description: Reload the configuration
+  skin:
+    usage: /skin <Skin> [Player]
+    permission: nick.command.skin
+    description: Set your own, or another player's skin
+  clearSkin:
+    usage: /clearSkin [Player]
+    permission: nick.command.skin.random
+    description: Reset your own, or another player's skin  
+  randomSkin:
+    usage: /randomSkin [Player] [Category]
+    permission: nick.command.skin.random
+    description: Get a random skin
+  listSkins:
+    usage: /listSkins
+    permission: nick.command.skin.list
+    description: Get a list of used skins
